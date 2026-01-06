@@ -238,6 +238,23 @@ export interface Page {
         blockName?: string | null;
         blockType: 'card';
       }
+    | {
+        heading: string;
+        description?: string | null;
+        ctaText?: string | null;
+        ctaLink?: string | null;
+        features?:
+          | {
+              title: string;
+              content?: string | null;
+              image: string | Media;
+              id?: string | null;
+            }[]
+          | null;
+        id?: string | null;
+        blockName?: string | null;
+        blockType: 'marketShield';
+      }
   )[];
   meta?: {
     title?: string | null;
@@ -1154,6 +1171,24 @@ export interface PagesSelect<T extends boolean = true> {
                     title?: T;
                     excerpt?: T;
                     link?: T;
+                    id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        marketShield?:
+          | T
+          | {
+              heading?: T;
+              description?: T;
+              ctaText?: T;
+              ctaLink?: T;
+              features?:
+                | T
+                | {
+                    title?: T;
+                    content?: T;
+                    image?: T;
                     id?: T;
                   };
               id?: T;
