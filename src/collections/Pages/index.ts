@@ -15,6 +15,7 @@ import { revalidateDelete, revalidatePage } from './hooks/revalidatePage'
 import { ToolsSection } from '@/blocks/ToolsSection/config'
 import { Card } from '@/blocks/Card/config'
 import { MarketShield } from '@/blocks/MarketShield/config'
+import { HorizontalContentWithImage } from '@/blocks/HorizontalContentWithImage/config'
 
 import {
   MetaDescriptionField,
@@ -75,7 +76,7 @@ export const Pages: CollectionConfig<'pages'> = {
             {
               name: 'layout',
               type: 'blocks',
-              blocks: [CallToAction, Content, MediaBlock, Archive, FormBlock, ToolsSection, Card, MarketShield],
+              blocks: [CallToAction, Content, MediaBlock, Archive, FormBlock, ToolsSection, Card, MarketShield, HorizontalContentWithImage],
               required: true,
               admin: {
                 initCollapsed: true,

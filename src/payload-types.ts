@@ -255,6 +255,20 @@ export interface Page {
         blockName?: string | null;
         blockType: 'marketShield';
       }
+    | {
+        items: {
+          title: string;
+          subtitle?: string | null;
+          description?: string | null;
+          buttonText?: string | null;
+          buttonUrl?: string | null;
+          image: string | Media;
+          id?: string | null;
+        }[];
+        id?: string | null;
+        blockName?: string | null;
+        blockType: 'horizontalContentWithImage';
+      }
   )[];
   meta?: {
     title?: string | null;
@@ -1188,6 +1202,23 @@ export interface PagesSelect<T extends boolean = true> {
                 | {
                     title?: T;
                     content?: T;
+                    image?: T;
+                    id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        horizontalContentWithImage?:
+          | T
+          | {
+              items?:
+                | T
+                | {
+                    title?: T;
+                    subtitle?: T;
+                    description?: T;
+                    buttonText?: T;
+                    buttonUrl?: T;
                     image?: T;
                     id?: T;
                   };

@@ -10,6 +10,7 @@ import { MediaBlock } from '@/blocks/MediaBlock/Component'
 import { ToolsSection } from '@/blocks/ToolsSection/Component'
 import { Card } from '@/blocks/Card/Component'
 import { MarketShieldBlock } from '@/blocks/MarketShield/Component'
+import { HorizontalContentWithImage } from '@/blocks/HorizontalContentWithImage/Component'
 
 const blockComponents = {
   archive: ArchiveBlock,
@@ -19,7 +20,8 @@ const blockComponents = {
   mediaBlock: MediaBlock,
   toolsSection: ToolsSection,
   card: Card,
-  marketShield: MarketShieldBlock
+  marketShield: MarketShieldBlock,
+  horizontalContentWithImage: HorizontalContentWithImage
 }
 
 export const RenderBlocks: React.FC<{
